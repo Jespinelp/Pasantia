@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="css/estilo1.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="cabecera">
+                <h1>SERVI-AMIGO</h1>
+            </div>
+        
+        </div>
+        <div align="center">
+            <div >
+            <ul id="button" >
+
+                <li><a class="btn" href="Index.html">Inicio</a></li>
+
+                <li><a class="btn" href="Somos.html">Somos</a></li>
+            
+                <li><a class="btn" href="Servicios.html">Servicios</a></li>
+                
+                <li><a class="btn" href="Contactanos.html">Contactanos</a></li>
+            
+                <li><a class="btn" href="Registrar.html">Registrarse</a></li>
+                
+                <li><a class="btn" href="Login.html">Iniciar Sesión</a></li>
+            
+            </ul>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div align="center">
+            <div id="after_submit"></div>
+            <div class="contenedor">
+                <div class="formulario">
+                    <h2>Contactanos</h2><br>
+                    <form id="contact_form" action="Contactanos.html" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <label class="required" for="name">Nombre</label><br />
+                            <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+                        </div>
+                        <div class="row">
+                            <label class="required" for="email">Correo</label><br />
+                            <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+                        </div>
+                        <div class="row">
+                            <label class="required" for="message">Mensaje</label><br />
+                            <textarea id="message" class="input" name="message" rows="7" cols="55"></textarea><br />
+                        </div>    
+                        <input id="submit_button" type="submit" value="Enviar Correo" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+<footer>
+    <div align="center">
+        Borja Jessica, Camacho Richard, Espinel Sebastián, Sañay Franks, Sarango Tatiana
+    </div>
+</footer>
+</html>

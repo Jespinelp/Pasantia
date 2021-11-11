@@ -1,0 +1,14 @@
+<nav class="cl-effect-5">
+				<li><a class="active" href="/"><span data-hover="Home">Home</span></a></li>
+				<li><a class="nav-link" href="/about"><span data-hover="Conócenos">Conócenos</span></a></li>
+                {{#if user}}
+				<li><a href="/compras/predict" class="nav-link"><span data-hover="Predecir">Predecir</span></a></li>
+				<li><a href="/productos" class="nav-link"><span data-hover="Productos">Ver Productos</span></a></li>
+				<li><a href="/compras" class="nav-link"><span data-hover="Facturas">Ver Facturas</span></a></li>
+                <li><a href="/users/logout" class="nav-link"><span data-hover="Salir">Cerrar Sesión</span></a></li>
+                {{else}}
+                <li><a class="nav-link" href="/productos-fuera"><span data-hover="Productos">Ver Productos</span></a></li>
+                <li><a href="/users/signup" class="nav-link"><span data-hover="Registrarse">Registrarse</span></a></li>
+                <li><a href="/compras/users" class="nav-link"><span data-hover="Ingresar">Iniciar Sesión</span></a></li>
+                {{/if}}
+				</nav>

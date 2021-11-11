@@ -1,0 +1,41 @@
+<div class="row">
+    {{#each predicciones_ventas}}    
+        <div class="col-md-6">
+            <div class="card mx-auto">
+                <div class="card-header">
+                    <h3>PREDICCIÓN DE VENTAS</h3>
+                 </div>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        NÚMERO DE VENTAS   : {{ventas1}} 
+                    </h4>
+                    <h4 class="card-title">
+                        MONTO DE COMPRAS   : $ {{monto_ventas}}
+                    </h4><br>
+                    <h4 class="card-title">
+                        Según el número de ventas y el monto de compras se predice que se tendrá un monto de ventas de   : 
+                    </h4><br>
+                    <h4 class="card-title text-center">
+                        $ {{prediccion}}
+                    </h4>
+                    <form action="/ventas/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button class="btn btn-danger w-100 btn-sm" type="submit">
+                            ELIMINAR PREDICCIÓN
+                        </button>
+                    </form>
+                </div>
+            </div><br>
+        </div>
+
+    {{else}}
+        <div class="card text-center">
+            <div class="card-body">
+                <p class="lead">No hay predicciones aún</p>
+                <a href="/compras/predict" class="btn btn-success w-100">Haz tu predicción!</a>
+            </div>
+        </div>
+    {{/each}}
+
+    
+</div>
