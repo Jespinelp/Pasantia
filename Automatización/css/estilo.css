@@ -1,0 +1,98 @@
+:root{
+    --width:300px;
+    --padding: 10px;
+    --bgcolor: rgb(42, 42, 42);
+    --hovercolor: rgb(42, 42, 42);
+    --width-collapsed: 50px;
+
+}
+body{
+    background-color: #96a4b3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-left: var(--width-colla);
+
+}
+.body--expanded{
+    margin-left: var(--width);
+
+}
+#main-container{
+    color: white;
+    
+}
+#sidemenu{
+    background-color: var(--bgcolor);
+    color:white;
+    position: fixed;
+    height: 100;
+    left: 0;
+    top: 0;
+        
+}
+#sidemenu a{
+    color:white;
+    text-decoration: none;
+        
+}
+#sidemenu #header{
+    box-sizing: border-box;
+    border-bottom: solid 1px var(--hovercolor);
+}
+#sidemenu #header #title{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#sidemenu #header #title, #sidemenu #header #menu-btn{
+    vertical-align: middle;
+}
+#sidemenu #header #menu-btn{
+    display: inline-block;
+}
+#sidemenu #header #menu-btn{
+    cursor: pointer;
+    padding: 10px;
+    width: var(--width-collapsed);
+    box-sizing: border-box;
+}
+#sidemenu #header #menu-btn:hover{
+    background-color: var(--hovercolor);
+}
+#sidemenu #header #menu-btn .btn-comp{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+}
+
+#sidemenu #profile{
+    border-bottom: solid 1px var(--hovercolor);
+    padding: var(--padding) 0;
+    text-align: center;
+
+}
+#sidemenu #profile #photo{
+    box-sizing: border-box;
+    padding: var(--padding);
+    margin: 0 auto;
+}
+#sidemenu #profile #photo img{
+    border-radius: 50%;
+    width: 60%;
+}
+#sidemenu #profile #photo, #sidemenu #profile #name{
+    font-size:24px;
+    padding: var(--padding) 0;
+    overflow: hidden;
+}
+#sidemenu #menu-items{
+    overflow: hidden;
+}
+#sidemenu #menu-items .item{
+    width: var(--width);
+}
+#sidemenu #menu-items .item a{
+    
+}
