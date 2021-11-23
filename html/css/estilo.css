@@ -253,3 +253,7 @@ select:focus{ outline: none;}
   background-color: #927373;
   color: white;
 }
+iframe {
+  border: 1px solid black;
+  width: 100%;
+}
