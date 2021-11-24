@@ -1,0 +1,145 @@
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+1435 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1551 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+1551 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1551 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+5694 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+84110 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown column property autoIncrementSequenceName changed while monitoring pkTable
+91386 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown column property physicalName changed while monitoring pkTable
+91386 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown SQLTypePhysicalProperties property name changed while monitoring pkTable
+174328 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown column property autoIncrementSequenceName changed while monitoring pkTable
+174328 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown column property autoIncrementSequenceName changed while monitoring pkTable
+190541 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown column property autoIncrementSequenceName changed while monitoring pkTable
+190541 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown column property autoIncrementSequenceName changed while monitoring pkTable
+223217 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPen  - Drop: I am over dtde=java.awt.dnd.DropTargetDropEvent[source=java.awt.dnd.DropTarget@1c84c3b]
+279182 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPen  - Drop: I am over dtde=java.awt.dnd.DropTargetDropEvent[source=java.awt.dnd.DropTarget@1c84c3b]
+310019 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown SQLTypePhysicalProperties property precision changed while monitoring pkTable
+310019 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown UserDefinedSQLType property myAutoIncrement changed while monitoring pkTable
+310019 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown SQLTypePhysicalProperties property precision changed while monitoring pkTable
+310019 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown UserDefinedSQLType property myAutoIncrement changed while monitoring pkTable
+436042 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPen  - Drop: I am over dtde=java.awt.dnd.DropTargetDropEvent[source=java.awt.dnd.DropTarget@1c84c3b]
+439509 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+439509 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+439509 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+439509 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+439823 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+440206 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+440206 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+504475 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPen  - Drop: I am over dtde=java.awt.dnd.DropTargetDropEvent[source=java.awt.dnd.DropTarget@1c84c3b]
+512610 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+CREATE SEQUENCE public.tipos_id_tipo_seq
+512620 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.tipos (
+                id_tipo NUMERIC(100) NOT NULL DEFAULT nextval('public.tipos_id_tipo_seq'),
+                tipo_rev VARCHAR NOT NULL,
+                tipo_estandar VARCHAR NOT NULL,
+                tipo_rel VARCHAR NOT NULL,
+                CONSTRAINT tipos_pk PRIMARY KEY (id_tipo)
+)
+512620 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.tipos_id_tipo_seq OWNED BY public.tipos.id_tipo
+512620 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.revision (
+                id_rev NUMERIC(100) NOT NULL,
+                estado VARCHAR NOT NULL,
+                fecha DATE NOT NULL,
+                mantis VARCHAR NOT NULL,
+                anexos VARCHAR NOT NULL,
+                observaciones_generales VARCHAR,
+                CONSTRAINT revision_pk PRIMARY KEY (id_rev)
+)
+512620 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE SEQUENCE public.detalle_cumplimiento_id_detalle_seq
+512620 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.detalle_cumplimiento (
+                id_detalle NUMERIC(100) NOT NULL DEFAULT nextval('public.detalle_cumplimiento_id_detalle_seq'),
+                id_tipo NUMERIC(100) NOT NULL,
+                fecha_registro DATE NOT NULL,
+                tipo_revision BOOLEAN NOT NULL,
+                descripcion VARCHAR NOT NULL,
+                observaciones VARCHAR NOT NULL,
+                tipo_estandar BOOLEAN NOT NULL,
+                resultado VARCHAR NOT NULL,
+                id_rev NUMERIC(100) NOT NULL,
+                CONSTRAINT detalle_cumplimiento_pk PRIMARY KEY (id_detalle)
+)
+512636 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.detalle_cumplimiento_id_detalle_seq OWNED BY public.detalle_cumplimiento.id_detalle
+512636 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE public.persona_id_usuario_seq
+512636 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.persona (
+                id_usuario NUMERIC(1) NOT NULL DEFAULT nextval('public.persona_id_usuario_seq'),
+                nombres VARCHAR(100) NOT NULL,
+                apellidos VARCHAR(100) NOT NULL,
+                usuario VARCHAR(100) NOT NULL,
+                rol VARCHAR(10) NOT NULL,
+                contrasenia VARCHAR(20) NOT NULL,
+                CONSTRAINT persona_pk PRIMARY KEY (id_usuario)
+)
+512636 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE public.persona_id_usuario_seq OWNED BY public.persona.id_usuario
+512636 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE public.rev_persona (
+                id_tipo NUMERIC(100) NOT NULL,
+                id_usuario NUMERIC(1) NOT NULL,
+                id_rev NUMERIC(100) NOT NULL,
+                Tipo_relacionperrev VARCHAR NOT NULL
+)
+512636 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER TABLE public.detalle_cumplimiento ADD CONSTRAINT tipos_detalle_cumplimiento_fk
+FOREIGN KEY (id_tipo)
+REFERENCES public.tipos (id_tipo)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+512636 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.rev_persona ADD CONSTRAINT tipos_rev_persona_fk
+FOREIGN KEY (id_tipo)
+REFERENCES public.tipos (id_tipo)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+512636 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.rev_persona ADD CONSTRAINT revision_rev_persona_fk
+FOREIGN KEY (id_rev)
+REFERENCES public.revision (id_rev)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+512636 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.detalle_cumplimiento ADD CONSTRAINT revision_detalle_cumplimiento_fk
+FOREIGN KEY (id_rev)
+REFERENCES public.revision (id_rev)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+512636 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE public.rev_persona ADD CONSTRAINT persona_rev_persona_fk
+FOREIGN KEY (id_usuario)
+REFERENCES public.persona (id_usuario)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+512668 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - The list size is :16
+514673 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - SQL_FILE_FILTER:SQL Script Files:[sql, ddl]
